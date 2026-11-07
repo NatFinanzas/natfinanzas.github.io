@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natanael Fernández | Asesor Financiero</title>
+<meta name="description" content="Asesoría financiera y patrimonial personalizada. Daily bursátil y carteras modelo.">
+<style>
+:root{--bg:#f4f6fa;--card:#fff;--tx:#0a1a33;--mut:#586a86;--acc:#1f6feb;--bd:#dde4f0;--navy:#071a35}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#060e1c;--card:#0d1a30;--tx:#eaf0fa;--mut:#9db0ce;--acc:#5aa2ff;--bd:#1b2d4c}}
+:root[data-theme="dark"]{--bg:#060e1c;--card:#0d1a30;--tx:#eaf0fa;--mut:#9db0ce;--acc:#5aa2ff;--bd:#1b2d4c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+.w{max-width:1060px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:9;background:rgba(7,26,53,.94);backdrop-filter:blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px;color:#fff}
+.logo{font-weight:700;font-size:15px}.logo small{display:block;font-weight:400;font-size:11px;opacity:.7;letter-spacing:.8px;text-transform:uppercase}
+nav a{color:#cfdcf2;text-decoration:none;margin-left:18px;font-size:14px}nav a:hover{color:#fff}
+#tm{background:none;border:1px solid #2c4676;color:#fff;border-radius:8px;padding:5px 10px;margin-left:16px;cursor:pointer}
+.hero{background:linear-gradient(135deg,#071a35 0%,#0b2a5b 60%,#123c82 100%);color:#fff;position:relative;overflow:hidden;padding:84px 0 96px}
+.hero svg{position:absolute;right:0;bottom:0;width:70%;max-width:760px;opacity:.35}
+.hero .w{position:relative}
+.badge{display:inline-block;border:1px solid #3b5f9e;border-radius:99px;padding:5px 14px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#bcd3ff}
+.hero h1{font-size:clamp(32px,6vw,58px);line-height:1.08;margin:18px 0 14px;max-width:760px}
+.hero h1 em{font-style:normal;color:#7fb4ff}
+.hero p{max-width:560px;font-size:18px;color:#cfdcf2}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:13px 24px;border-radius:10px;text-decoration:none;font-weight:600;margin:8px 10px 0 0}
+.btn.o{background:none;border:1px solid #4a6faa}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-top:-44px;position:relative}
+.stat{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px 20px;box-shadow:0 8px 24px rgba(7,26,53,.12)}
+.stat b{display:block;font-size:17px}.stat span{color:var(--mut);font-size:13px}
+section{padding:54px 0 8px}
+.k{color:var(--acc);font-weight:700;font-size:12px;letter-spacing:1.4px;text-transform:uppercase}
+h2{font-size:clamp(24px,4vw,34px);margin:6px 0 8px}.sub{color:var(--mut);margin:0 0 26px;max-width:640px}
+.g{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:26px;display:flex;flex-direction:column}
+.c h3{margin:0 0 6px;font-size:20px}.c p{color:var(--mut);margin:6px 0}
+.c ul{padding-left:18px;margin:12px 0;color:var(--mut);flex:1}.c li{margin:5px 0}
+.c.f{border:2px solid var(--acc);position:relative}
+.c.f:before{content:"Más elegido";position:absolute;top:-12px;left:22px;background:var(--acc);color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px;letter-spacing:.6px}
+.pr{font-size:26px;font-weight:800;margin:6px 0 14px}.pr small{font-size:13px;font-weight:400;color:var(--mut)}
+.c .btn{text-align:center;margin:0}
+.btn.ig{display:inline-flex;align-items:center;gap:8px;background:none;color:var(--tx);border:1px solid var(--bd)}
+.btn.ig:hover{border-color:var(--acc);color:var(--acc)}
+footer a{color:#fff}
+.pill{display:inline-block;border:1px solid var(--bd);border-radius:99px;padding:3px 12px;font-size:12px;color:var(--mut)}
+.me{display:grid;grid-template-columns:300px 1fr;gap:34px;align-items:center}
+.ph{position:relative;aspect-ratio:4/5;border-radius:18px;background:linear-gradient(135deg,#0b2a5b,#123c82);display:flex;align-items:center;justify-content:center;color:#fff;font-size:64px;font-weight:700;overflow:hidden}
+.ph i{position:absolute;inset:0;background:url(foto.jpg) center 20%/cover no-repeat}
+.st{display:flex;gap:14px}.st b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--acc);color:#fff;display:flex;align-items:center;justify-content:center}
+.st p{margin:0 0 14px}
+footer{margin-top:60px;background:var(--navy);color:#9fb3d6;padding:34px 0 100px;font-size:13px}
+footer strong{color:#fff}
+.wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;text-decoration:none;padding:13px 20px;border-radius:99px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.3);z-index:10}
+@media(max-width:700px){nav a{display:none}.me{grid-template-columns:1fr}.ph{max-width:260px}.hero{padding:56px 0 80px}}
+</style>
+</head>
+<body>
+<header><div class="w nav">
+<div class="logo">Natanael Fernández<small>Asesor Financiero</small></div>
+<div><nav style="display:inline"><a href="#quien">Quién soy</a><a href="#daily">Daily</a><a href="#carteras">Carteras</a><a href="#asesoria">Asesoría</a></nav><button id="tm" aria-label="Cambiar tema">◐</button></div>
+</div></header>
+
+<div class="hero">
+<svg viewBox="0 0 700 300" fill="none" stroke="#7fb4ff" stroke-width="2.5"><path d="M0 260 L80 230 L150 245 L230 170 L300 190 L380 110 L450 130 L540 60 L620 80 L700 20"/><path d="M0 285 L90 262 L160 270 L240 215 L320 230 L400 160 L480 175 L560 120 L700 90" opacity=".5"/></svg>
+<div class="w">
+<span class="badge">Asesor Financiero</span>
+<h1>Ordená tus finanzas e invertí con <em>criterio y estrategia</em>.</h1>
+<p>Acompañamiento profesional, información clara del mercado y un plan adaptado a tus objetivos.</p>
+<a class="btn" href="#asesoria">Ver tipos de asesoría</a><a class="btn o" href="#daily">Leer el daily</a>
+</div></div>
+
+<div class="w stats">
+<div class="stat"><b>3 niveles</b><span>de asesoría a tu medida</span></div>
+<div class="stat"><b>Daily bursátil</b><span>información del mercado, día a día</span></div>
+<div class="stat"><b>Carteras modelo</b><span>según tu perfil y objetivo</span></div>
+<div class="stat"><b>Atención directa</b><span>por WhatsApp</span></div>
+</div>
+
+<section id="quien"><div class="w me">
+<div class="ph">NF<i role="img" aria-label="Natanael Fernández, asesor financiero"></i></div>
+<div>
+<div class="k">Quién soy</div>
+<h2>Natanael Fernández</h2>
+<!-- ✏️ EDITABLE: tu presentación -->
+<p class="sub" style="margin-bottom:16px">Acompaño a personas y familias a ordenar sus finanzas, invertir con criterio y construir patrimonio a largo plazo, con información clara y seguimiento cercano.</p>
+<a class="btn ig" href="https://www.instagram.com/natanael.fz/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg> Instagram @natanael.fz</a>
+<!-- ✏️ EDITABLE: agregá acá tu experiencia, formación o matrícula si querés -->
+</div></div></section>
+
+<section id="daily"><div class="w">
+<div class="k">Mercado</div><h2>Daily bursátil</h2>
+<p class="sub">Un resumen diario de lo que mueve a los mercados.</p>
+<div class="c">
+<!-- ✏️ EDITABLE: fecha, título y texto del daily de hoy -->
+<span class="pill" style="align-self:flex-start">Fecha: --/--/----</span>
+<h3 style="margin-top:12px">Resumen del día</h3>
+<p>El primer informe se publicará muy pronto.</p>
+</div></div></section>
+
+<section id="carteras"><div class="w">
+<div class="k">Estrategias</div><h2>Carteras modelo</h2>
+<p class="sub">Propuestas de referencia según perfil de riesgo y objetivo.</p>
+<div class="g">
+<!-- ✏️ EDITABLE: cada tarjeta es una cartera; cambiá el texto "Próximamente" cuando la tengas -->
+<div class="c"><h3>Conservadora</h3><p>Prioriza estabilidad.</p><span class="pill" style="align-self:flex-start">Próximamente</span></div>
+<div class="c"><h3>Moderada</h3><p>Equilibrio entre riesgo y rendimiento.</p><span class="pill" style="align-self:flex-start">Próximamente</span></div>
+<div class="c"><h3>Agresiva</h3><p>Mayor riesgo, mayor potencial.</p><span class="pill" style="align-self:flex-start">Próximamente</span></div>
+<div class="c"><h3>Retiro</h3><p>Pensada para el largo plazo.</p><span class="pill" style="align-self:flex-start">Próximamente</span></div>
+<div class="c"><h3>Objetivos</h3><p>Para metas con plazo definido.</p><span class="pill" style="align-self:flex-start">Próximamente</span></div>
+<div class="c"><h3>Tech</h3><p>Foco en empresas tecnológicas.</p><span class="pill" style="align-self:flex-start">Próximamente</span></div>
+</div></div></section>
+
+<section id="asesoria"><div class="w">
+<div class="k">Planes</div><h2>Elegí tu tipo de asesoría</h2>
+<p class="sub">Tres niveles de acompañamiento. Podés empezar por el que mejor se ajuste a vos y cambiar más adelante.</p>
+<div class="g" style="padding-top:12px">
+
+<!-- ✏️ EDITABLE PLAN 1: cambiá título, precio, descripción y cada punto de la lista -->
+<div class="c"><h3>Asesoría Clásica</h3><p>Soy tu asesor dentro de tu broker.</p>
+<div class="pr">Sin costo</div>
+<ul><li>Acompañamiento en tus decisiones de inversión</li><li>Acceso al daily y a las carteras modelo</li></ul>
+<a class="btn" href="https://wa.me/5491122655928?text=Hola%2C%20me%20interesa%20la%20Asesor%C3%ADa%20Cl%C3%A1sica." target="_blank" rel="noopener">Consultar</a></div>
+
+<!-- ✏️ EDITABLE PLAN 2 -->
+<div class="c f"><h3>Asesoría VIP</h3><p>Seguimiento más personalizado.</p>
+<div class="pr">Consultar valor</div>
+<ul><li>Todo lo de la Clásica</li><li>1 encuentro mensual opcional, presencial o virtual, de 1 hora</li><li>Evaluación de tu progreso y ajuste de estrategias si es necesario</li></ul>
+<a class="btn" href="https://wa.me/5491122655928?text=Hola%2C%20me%20interesa%20la%20Asesor%C3%ADa%20VIP." target="_blank" rel="noopener">Consultar</a></div>
+
+<!-- ✏️ EDITABLE PLAN 3 -->
+<div class="c"><h3>Asesoría Premium</h3><p>Acompañamiento integral de tu patrimonio.</p>
+<div class="pr">Consultar valor</div>
+<ul><li>Todo lo de la VIP</li><li>1 encuentro quincenal</li><li>Recomendaciones activas de instrumentos</li><li>Seguimiento con alertas sobre tus posiciones</li><li>Asesoramiento patrimonial personalizado: organización y optimización de ingresos y gastos</li></ul>
+<a class="btn" href="https://wa.me/5491122655928?text=Hola%2C%20me%20interesa%20la%20Asesor%C3%ADa%20Premium." target="_blank" rel="noopener">Consultar</a></div>
+</div></div></section>
+
+<section><div class="w">
+<div class="k">Cómo trabajamos</div><h2>Un camino simple</h2><p class="sub"></p>
+<!-- ✏️ EDITABLE: pasos -->
+<div class="st"><b>1</b><p><strong>Conversamos.</strong> Conozco tu situación, objetivos y perfil de riesgo.</p></div>
+<div class="st"><b>2</b><p><strong>Armamos tu estrategia.</strong> Definimos juntos dónde y cómo invertir.</p></div>
+<div class="st"><b>3</b><p><strong>Hacemos seguimiento.</strong> Evaluamos tu progreso y ajustamos cuando haga falta.</p></div>
+<a class="btn" href="https://wa.me/5491122655928?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20asesor%C3%ADa." target="_blank" rel="noopener" style="margin-top:14px">Escribime por WhatsApp</a>
+<a class="btn ig" href="https://www.instagram.com/natanael.fz/" target="_blank" rel="noopener" style="margin-top:14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg> Seguime en Instagram</a>
+</div></section>
+
+<footer><div class="w">
+<p><strong>Natanael Fernández | Asesor Financiero</strong></p>
+<p>Contenido informativo y educativo. No constituye una oferta ni una recomendación personalizada de inversión salvo en el marco de una asesoría contratada. Toda inversión implica riesgos, incluida la pérdida de capital; los rendimientos pasados no garantizan resultados futuros.</p>
+<p>Instagram: <a href="https://www.instagram.com/natanael.fz/" target="_blank" rel="noopener">@natanael.fz</a></p>
+<p>© <span id="y">2026</span> Natanael Fernández</p>
+</div></footer>
+<a class="wa" href="https://wa.me/5491122655928?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20asesor%C3%ADa." target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+document.getElementById("y").textContent=new Date().getFullYear();
+document.getElementById("tm").onclick=function(){var r=document.documentElement,d=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);r.setAttribute("data-theme",d?"light":"dark")};
+</script>
+</body>
+</html>
