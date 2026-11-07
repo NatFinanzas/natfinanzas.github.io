@@ -18,7 +18,7 @@ var INFORMES=[
 // VIDEOS (Información y Análisis): el primero es el más nuevo. imagen es opcional (ej: "img/video1.jpg"); sin imagen se muestra el título.
 var VIDEOS=[
  {titulo:"Fondo de emergencia",enlace:"https://www.tiktok.com/@natanael.fz/video/7693693651884559624",imagen:"img1.jpg"},
- {titulo:"Interes Compuesto",enlace:"https://www.tiktok.com/@natanael.fz/video/7692943723310697736"},
- {titulo:"Que son las Lecaps?",enlace:"https://www.tiktok.com/@natanael.fz/video/7702608654381436178"},
- {titulo:"Pasos para comenzar a invertir",enlace:"https://www.tiktok.com/@natanael.fz/video/7698696232495009031"},
+ {titulo:"Interes Compuesto",enlace:"https://www.tiktok.com/@natanael.fz/video/7692943723310697736",imagen:"img1.jpg"},
+ {titulo:"Que son las Lecaps?",enlace:"https://www.tiktok.com/@natanael.fz/video/7702608654381436178",imagen:"img1.jpg"},
+ {titulo:"Pasos para comenzar a invertir",enlace:"https://www.tiktok.com/@natanael.fz/video/7698696232495009031",imagen:"img1.jpg"},
 ];
