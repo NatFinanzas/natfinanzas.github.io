@@ -19,7 +19,8 @@ var INFORMES=[
 var VIDEOS=[
  {titulo:"Pasos para comenzar a invertir",enlace:"https://www.tiktok.com/@natanael.fz/video/7698696232495009031",imagen:"img1.jpg"},
  {titulo:"Fondo de emergencia",enlace:"https://www.tiktok.com/@natanael.fz/video/7693693651884559624",imagen:"img1.jpg"},
- {titulo:"Interes Compuesto",enlace:"https://www.tiktok.com/@natanael.fz/video/7692943723310697736",imagen:"img1.jpg"},
  {titulo:"Que son las Lecaps?",enlace:"https://www.tiktok.com/@natanael.fz/video/7702608654381436178",imagen:"img1.jpg"},
+ {titulo:"Interes Compuesto",enlace:"https://www.tiktok.com/@natanael.fz/video/7692943723310697736",imagen:"img1.jpg"},
  {titulo:"Pensa en tu Jubilación",enlace:"https://www.tiktok.com/@natanael.fz/video/7698708684012145938",imagen:"img1.jpg"},
+ {titulo:"Que son los dividendos?",enlace:"https://www.tiktok.com/@natanael.fz/video/7698822272542346504",imagen:"img1.jpg"},
 ];
