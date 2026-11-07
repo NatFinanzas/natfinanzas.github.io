@@ -11,5 +11,15 @@ put("mk",dl+(INFORMES[0]?mi(INFORMES[0]):""));
 put("mkall",dl+(INFORMES.length?INFORMES.map(mi).join(""):'<p class="mu">Los informes se publicarán acá.</p>'));
 put("vh",ve(VIDEOS.slice(0,4)));put("vall",ve(VIDEOS));
 document.getElementById("bg").onclick=function(){document.body.classList.toggle("mn")};
+var IL='<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>',
+II='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>',
+IW='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>';
+function ic(u,l,s){return'<a class="ic" href="'+u+'" target="_blank" rel="noopener" aria-label="'+l+'">'+s+'</a>'}
+put("soc",(LINKEDIN?ic(LINKEDIN,"LinkedIn",IL):"")+ic(ig,"Instagram",II));
+put("wac",'<a class="btn o wl" href="'+wa+'" target="_blank" rel="noopener" style="margin-left:0">'+IW+' Escribime por WhatsApp</a>');
+Array.prototype.forEach.call(document.querySelectorAll("[data-a]"),function(x){x.href=wa+"?text="+encodeURIComponent("Hola, quiero consultar por "+x.getAttribute("data-a"));x.target="_blank";x.rel="noopener"});
 var cf=document.getElementById("cf");
-if(cf)cf.onsubmit=function(e){e.preventDefault();var n=this.nom.value.trim(),q=this.msg.value.trim();window.open(wa+"?text="+encodeURIComponent("Hola, quisiera más información sobre la asesoría."+(n?" Soy "+n+".":"")+(q?" "+q:"")),"_blank","noopener")};
+if(cf)cf.onsubmit=function(e){e.preventDefault();var f=this,b=f.querySelector("button"),m=document.getElementById("fm");
+if(!FORMULARIO){window.open(wa+"?text="+encodeURIComponent("Hola, soy "+f.nom.value+" ("+f.email.value+"). "+f.msg.value),"_blank","noopener");return}
+b.disabled=true;b.textContent="Enviando…";m.textContent="";
+fetch(FORMULARIO,{method:"POST",body:new FormData(f),headers:{Accept:"application/json"}}).then(function(r){if(!r.ok)throw 0;f.reset();m.textContent="¡Gracias! Recibí tu consulta y te voy a responder por correo."}).catch(function(){m.textContent="No se pudo enviar tu consulta. Probá de nuevo o escribime por WhatsApp."}).then(function(){b.disabled=false;b.textContent="Enviar consulta →"})};

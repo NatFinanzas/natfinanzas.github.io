@@ -1,6 +1,10 @@
 // ✏️ ARCHIVO PARA EDITAR: acá cargás el daily, los informes y los videos.
 // Reglas: usá comillas dobles "así", no pongas comillas dobles dentro de un texto, y no borres las comas ni las llaves.
 var WHATSAPP="5491122655928", INSTAGRAM="natanael.fz";
+// LINKEDIN: pegá entre las comillas el link completo de tu perfil (ej: "https://www.linkedin.com/in/tu-usuario/"). Vacío = el ícono no se muestra.
+var LINKEDIN="";
+// FORMULARIO: pegá entre las comillas el link que te da Formspree (ej: "https://formspree.io/f/xxxxxxxx"). Vacío = el formulario abre WhatsApp con los datos.
+var FORMULARIO="";
 
 // DAILY: siempre aparece primero. Cada día cambiá fecha, resumen y enlace (fecha: "AAAA-MM-DD").
 // enlace: archivo o link del daily, por ejemplo "informes/daily-2026-11-09.html". Vacío "" = sin link todavía.
