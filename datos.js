@@ -17,5 +17,6 @@ var INFORMES=[
 
 // VIDEOS (Información y Análisis): el primero es el más nuevo. imagen es opcional (ej: "img/video1.jpg"); sin imagen se muestra el título.
 var VIDEOS=[
+ {titulo:"Fondo de emergencia",enlace:"titulo:"https://www.tiktok.com/@natanael.fz/video/7693693651884559624?is_from_webapp=1&sender_device=pc&web_id=7693297246011606546",imagen:"img/img1.jpg"}
  // {titulo:"Título del video",enlace:"https://www.instagram.com/reel/XXXX/",imagen:"img/video1.jpg"},
 ];
