@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es"><head><title>Informe VISTA Energy | Natanael Fernández</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Resultados del tercer trimestre 2026 de Vista Energy: producción, EBITDA, valuación y riesgos."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400&display=swap" rel="stylesheet"><link rel="stylesheet" href="estilos.css">
+<style>
+.rep{max-width:860px}
+.rep .back{display:inline-block;margin-bottom:28px}
+.rep .eyebrow{font-family:Inter,system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--lb);margin-bottom:8px}
+.rep h1{font-size:clamp(30px,5vw,46px);line-height:1.12;margin:0 0 16px;color:#fff}
+.rep .lede{color:#b8c4da;font-size:18px;margin:0 0 30px}
+.rep section{margin-bottom:40px}
+.rep h2{font-size:clamp(22px,3vw,28px);line-height:1.25;margin:0 0 14px;color:#fff}
+.rep p{margin:0 0 14px;color:#e1e8f4;line-height:1.7}
+.rep .up{color:#7fd4a1}.rep .down{color:#f08a8a}
+.rep .card,.rep .kpi,.rep .formula{background:rgba(255,255,255,.04);border:1px solid #2b4468;border-radius:10px}
+.rep .card{padding:22px}
+.rep .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:40px}
+.rep .kpi{padding:16px}
+.rep .kpi .label{font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--mu)}
+.rep .kpi .value{font-family:Newsreader,Georgia,serif;font-size:27px;line-height:1.15;margin:6px 0 4px;color:#fff}
+.rep .kpi .value.up{color:#7fd4a1}.rep .kpi .value.down{color:#f08a8a}
+.rep .kpi .sub{font-size:13px;color:#b8c4da}
+.rep .table-wrap{overflow-x:auto;margin:18px 0;border-radius:10px;border:1px solid #2b4468;background:rgba(255,255,255,.04)}
+.rep table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:500px}
+.rep th,.rep td{padding:11px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08);color:#e1e8f4}
+.rep th{font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--lb)}
+.rep td.num,.rep th.num{text-align:right;font-variant-numeric:tabular-nums}
+.rep tr:last-child td{border-bottom:none}
+.rep .example{background:rgba(255,255,255,.06);border:1px solid #2b4468;border-left:4px solid var(--ac);border-radius:10px;padding:18px 20px;margin:16px 0 18px;color:#e1e8f4;line-height:1.7}
+.rep .example .eyebrow{margin-bottom:6px}
+.rep .note{font-weight:700;color:var(--lb)}
+.rep .scale{margin:20px 0 8px}
+.rep .scale-bar{position:relative;height:12px;border-radius:999px;background:linear-gradient(90deg,#7fd4a1 0%,#5b8fd0 50%,#f08a8a 100%);margin-top:14px}
+.rep .scale-marker{position:absolute;top:-7px;width:4px;height:26px;border-radius:4px;background:#fff;box-shadow:0 0 0 3px rgba(8,26,51,.7);transform:translateX(-50%)}
+.rep .scale-labels{display:flex;justify-content:space-between;gap:8px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--mu);margin-top:12px}
+.rep .scale-caption{font-size:14.5px;color:#b8c4da;margin-top:10px;line-height:1.6}
+.rep ol.risks{counter-reset:r;list-style:none;padding:0;margin:16px 0}
+.rep ol.risks li{counter-increment:r;position:relative;padding:14px 16px 14px 58px;margin-bottom:10px;background:rgba(255,255,255,.04);border:1px solid #2b4468;border-radius:10px;color:#e1e8f4;line-height:1.65}
+.rep ol.risks li::before{content:counter(r);position:absolute;left:16px;top:13px;width:28px;height:28px;border-radius:50%;background:rgba(169,195,232,.16);color:var(--lb);font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.rep ul.news{list-style:none;padding:0;margin:16px 0}
+.rep ul.news li{padding:12px 16px;margin-bottom:8px;background:rgba(255,255,255,.04);border:1px solid #2b4468;border-radius:10px;color:#e1e8f4;line-height:1.65}
+.rep ul.news .date{font-size:11px;font-weight:600;color:var(--lb);letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:2px}
+.rep .tag{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(127,212,161,.14);color:#7fd4a1;border:1px solid rgba(127,212,161,.4);font-size:13.5px;font-weight:500}
+.rep .tag.neutral{background:rgba(240,138,138,.12);color:#f5b3b3;border-color:rgba(240,138,138,.4)}
+.rep .formula{padding:20px;margin:24px 0;background:rgba(255,255,255,.06)}
+.rep .chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.rep .op{color:var(--mu)}
+.rep .result{margin-top:14px;font-family:Newsreader,Georgia,serif;font-size:21px;line-height:1.3;color:#fff}
+.rep .one-liner{margin-top:18px;padding:20px;border-radius:10px;background:rgba(74,127,192,.14);border:1px solid rgba(74,127,192,.45);font-size:17px;color:#fff;line-height:1.6}
+.rep .rep-foot{margin-top:44px;padding-top:20px;border-top:1px solid #2b4468;color:var(--mu);font-size:13px;text-align:center}
+@media(max-width:640px){.rep .kpis{grid-template-columns:repeat(2,1fr)}.rep .kpi .value{font-size:22px}.rep .card,.rep .formula{padding:18px}.rep .scale-labels{font-size:10px}}
+</style></head>
+<body>
+<header id="hd"></header>
+<main class="dk" style="min-height:75vh"><div class="w rep">
+<a class="va back" href="mercados.html">← Volver</a>
+<div class="eyebrow">Resultados del tercer trimestre 2026</div>
+  <h1>VIST: Vista Energy. ¿Cuánto más puede crecer en Vaca Muerta?</h1>
+  <p class="lede">Producción récord, un EBITDA que crece 78% y flujo libre fuerte. El mercado esperaba un poco más de ganancia por acción, pero el negocio nunca estuvo tan sólido.</p>
+
+<div class="kpis">
+<div class="kpi"><div class="label">Precio</div><div class="value ">USD 71,88</div><div class="sub">-0,5% desde el balance</div></div>
+<div class="kpi"><div class="label">Producción</div><div class="value up">169.000 boe/d</div><div class="sub">+33% interanual</div></div>
+<div class="kpi"><div class="label">EBITDA ajustado</div><div class="value up">USD 841 M</div><div class="sub">+78% interanual</div></div>
+<div class="kpi"><div class="label">Margen EBITDA</div><div class="value up">68%</div><div class="sub">+1 punto interanual</div></div>
+<div class="kpi"><div class="label">Flujo libre 3T</div><div class="value up">USD 334 M</div><div class="sub">USD 563 M en el año</div></div>
+<div class="kpi"><div class="label">Deuda neta / EBITDA</div><div class="value up">1,12x</div><div class="sub">1,41x en el 2T</div></div>
+</div>
+
+  <section>
+    <h2>¿Qué hace Vista?</h2>
+    <p>Vista es una petrolera independiente fundada en 2017 por Miguel Galuccio, ex CEO de YPF. Tiene sede legal en México y cotiza en Nueva York y en la Bolsa Mexicana, pero casi todo su negocio está en Argentina: produce petróleo y gas en el corazón de Vaca Muerta, en Neuquén, una de las formaciones de shale más grandes fuera de Estados Unidos.</p>
+    <p>Es una empresa enfocada solo en producir. No refina ni vende combustible al público. Eso la hace muy sensible al precio del petróleo, pero también le permite vender el 100% de su crudo a precio internacional y exportar cerca de tres cuartas partes de lo que produce.</p>
+  </section>
+
+  <section>
+    <h2>¿Cómo le fue en el trimestre?</h2>
+    <p>La producción total llegó a 169.000 barriles equivalentes por día, un 33% más que hace un año y 8% más que el trimestre anterior. El petróleo solo creció 34%, hasta 147.000 barriles diarios. Parte del salto viene de consolidar por primera vez un trimestre completo de los activos que le compró a Equinor (Bandurria Sur y Bajo del Toro); el resto es crecimiento propio, con 25 pozos nuevos conectados en el trimestre.</p>
+    <p>Los ingresos fueron de USD 1.230 millones, un 75% más que hace un año, con un precio realizado de USD 84,2 por barril. El EBITDA ajustado llegó a USD 841 millones (+78%) y la ganancia neta ajustada a USD 240 millones (+54%). La ganancia neta contable fue de USD 293 millones; contra el año pasado parece más baja, pero porque en 2025 tuvo una ganancia extraordinaria de USD 288 millones por la compra de La Amarga Chica.</p>
+<div class="table-wrap"><table><thead><tr><th class="">Concepto</th><th class="num">3T 2026</th><th class="num">Variación</th><th class="num">Contexto</th></tr></thead><tbody><tr><td class="">Producción total</td><td class="num">169.000 boe/d</td><td class="num">+33%</td><td class="num">+8% vs 2T</td></tr><tr><td class="">Producción de petróleo</td><td class="num">147.100 bbl/d</td><td class="num">+34%</td><td class="num">+9% vs 2T</td></tr><tr><td class="">Ingresos</td><td class="num">USD 1.230 M</td><td class="num">+75%</td><td class="num"></td></tr><tr><td class="">Precio realizado del crudo</td><td class="num">USD 84,2/bbl</td><td class="num">+30%</td><td class="num">-6% vs 2T</td></tr><tr><td class="">EBITDA ajustado</td><td class="num">USD 841 M</td><td class="num">+78%</td><td class="num">Margen de 68%</td></tr><tr><td class="">Costo de extracción</td><td class="num">USD 4,7/boe</td><td class="num">+6%</td><td class="num"></td></tr><tr><td class="">Ganancia neta ajustada</td><td class="num">USD 240 M</td><td class="num">+54%</td><td class="num"></td></tr><tr><td class="">Flujo libre</td><td class="num">USD 334 M</td><td class="num"></td><td class="num">USD 563 M en 2026</td></tr></tbody></table></div>
+    <p>El único punto flojo fue la ganancia por acción, que quedó debajo de lo que esperaba el consenso. Las cifras de los analistas varían según la medición, pero la diferencia se explica sobre todo por impuestos y depreciación más altos, no por el negocio en sí: los ingresos superaron con holgura lo esperado.</p>
+  </section>
+
+  <section>
+    <h2>¿Qué es el costo de extracción y por qué es la gran ventaja de Vista?</h2>
+    <p>El costo de extracción (lifting cost) es lo que le cuesta a una petrolera sacar cada barril de un pozo que ya está perforado: energía, personal, mantenimiento y tratamiento. No incluye la inversión en pozos nuevos ni el transporte.</p>
+<div class="example"><div class="eyebrow">Ejemplo</div>Supongamos que un productor vende cada barril a 84 dólares. Si sacarlo le cuesta 25, le quedan 59 para pagar transporte, impuestos e inversión. Si le cuesta 4,7, como a Vista, le quedan casi 80. Cuanto más bajo es ese costo, más aguanta la empresa si el precio del petróleo cae.</div>
+    <p>Vista tiene uno de los costos de extracción más bajos de la región, USD 4,7 por barril. Subió 6% por la inflación en pesos con un tipo de cambio quieto, pero sigue en niveles de primer nivel mundial. Sus gastos de venta incluso bajaron 14% por barril, porque el oleoducto Duplicar reemplazó el transporte en camiones.</p>
+  </section>
+
+  <section>
+    <h2>¿Qué es el apalancamiento neto y por qué bajó tanto?</h2>
+    <p>El apalancamiento neto compara la deuda financiera menos la caja con el EBITDA de un año. Indica cuántos años de generación operativa necesitaría la empresa para pagar toda su deuda.</p>
+<div class="example"><div class="eyebrow">Ejemplo</div>Supongamos que una empresa debe 1.120, tiene 120 en caja y genera 1.000 de EBITDA por año. Su deuda neta es 1.000 y su apalancamiento es 1 vez: con un año de generación podría cancelarla. Por debajo de 1,5 veces, en el sector petrolero se considera un balance cómodo.</div>
+    <p>Vista se endeudó para comprar los activos de Petronas y de Equinor, pero con la generación de este año el apalancamiento bajó a 1,12 veces desde 1,41 en junio y 1,83 hace un año. La compañía espera llegar a 1 vez a fin de año. Cerró septiembre con USD 775 millones en caja, la cifra más alta de su historia.</p>
+  </section>
+
+  <section>
+    <h2>¿Qué es el EV/EBITDA y por qué se usa para valuar petroleras?</h2>
+    <p>El EV/EBITDA compara el valor total de la empresa (el valor de sus acciones más su deuda neta) con el EBITDA, que es la ganancia operativa antes de depreciaciones. Se usa mucho en petroleras porque la depreciación de los pozos y los impuestos distorsionan la ganancia contable.</p>
+<div class="example"><div class="eyebrow">Ejemplo</div>Supongamos que alguien compra una empresa entera pagando 100 por las acciones y haciéndose cargo de 40 de deuda neta: el valor total es 140. Si la empresa genera 40 de EBITDA por año, el EV/EBITDA es 3,5. En términos simples, con 3,5 años de generación operativa recupera lo que pagó, antes de impuestos e inversiones.</div>
+    <p>Vista vale hoy unos USD 11.100 millones entre acciones y deuda neta. La compañía reafirmó una guía de EBITDA ajustado de USD 3.300 millones para 2027, suponiendo un Brent de USD 80. Eso implica un EV/EBITDA de alrededor de 3,4 veces, un múltiplo bajo incluso para el sector.</p>
+  </section>
+
+  <section>
+    <h2>¿Cuáles son los temas clave del negocio?</h2>
+    <p>El primero es el crecimiento. Vista conecta pozos a un ritmo de 100 por año, mantiene su objetivo de 158.000 boe/d de promedio para 2026 y espera cerrar el cuarto trimestre cerca de 175.000. Para 2027 reafirmó 185.000 boe/d y podría sumar un equipo de perforación más si se aprueba el proyecto Bandurria Norte bajo el RIGI, el régimen de incentivo a grandes inversiones, que adelantaría de 2029 a 2027.</p>
+    <p>El segundo es la evacuación. Muchos inversores temen que la producción supere la capacidad de los oleoductos, pero la compañía asegura que hoy tiene 180.000 barriles diarios de capacidad, un 20% más de lo que produce, y que el oleoducto VMOS empieza a operar en el primer semestre de 2027.</p>
+    <p>El tercero es qué hace con la caja. Tiene aprobado un plan de recompra de acciones de USD 150 millones para este año, de los que ya ejecutó 55, y anticipa una recompra mayor para 2027. También deja abierta la puerta a nuevas compras en la zona petrolera de Vaca Muerta, aunque hoy no participa de ningún proceso.</p>
+    <p>Cada dólar de variación en el precio del petróleo mueve el EBITDA anual entre USD 45 y 50 millones.</p>
+  </section>
+
+  <section>
+    <h2>¿Qué pasó desde el balance?</h2>
+    <p>La acción cerró en USD 72,27 el día del balance, cayó cerca de 1% en la rueda siguiente y hoy cotiza en USD 71,88, prácticamente sin cambios (-0,5%). Está cerca de los máximos del año, alrededor de USD 75, que tocó la semana anterior al balance. En los últimos cinco años acumula una suba de más de 1.000%.</p>
+    <p>Los 12 analistas que la cubren recomiendan comprar o sobreponderar; ninguno sugiere mantener o vender. El precio objetivo promedio es de USD 93, un 30% por encima del precio actual. En septiembre, J.P. Morgan subió su objetivo de USD 93 a 94.</p>
+    <p>No paga dividendos; devuelve caja a los accionistas mediante recompras de acciones.</p>
+  </section>
+
+  <section>
+    <h2>¿Qué movimientos hizo la empresa en las últimas semanas?</h2>
+<ul class="news"><li><span class="date">29 oct</span>Reafirmó sus guías: 158.000 boe/d en 2026, 185.000 boe/d en 2027 y USD 3.300 millones de EBITDA para 2027 con un Brent de USD 80.</li><li><span class="date">Octubre</span>Anunció que podría adelantar a 2027 el desarrollo de Bandurria Norte si se aprueba su ingreso al RIGI.</li><li><span class="date">3T 2026</span>Recompró acciones por USD 55 millones y canceló USD 60 millones netos de deuda.</li><li><span class="date">1 sep</span>J.P. Morgan reiteró su recomendación de compra y subió el precio objetivo a USD 94.</li><li><span class="date">17 ago</span>Peter Thiel, cofundador de Palantir, compró una participación de alrededor de 1% de la compañía.</li></ul>
+  </section>
+
+  <section>
+    <h2>¿Quiénes son los dueños y qué hacen los de adentro?</h2>
+    <p>Miguel Galuccio, fundador, presidente y CEO, tiene alrededor de 5,6% de la compañía, y el resto del equipo fundador (el CFO Pablo Vera Pinto, el CTO Juan Garoby y el director de operaciones Matías Weissel) suma otro 0,6%. Es una empresa donde la gerencia tiene mucho en juego. La entrada de Peter Thiel con cerca de 1% también es una señal de interés de inversores internacionales.</p>
+    <p>Los movimientos de los directivos en los últimos meses fueron liquidaciones de planes de compensación con la propia compañía, no ventas en el mercado. No hubo compras ni ventas significativas en bolsa.</p>
+  </section>
+
+  <section>
+    <h2>¿Cuánto vale Vista?</h2>
+    <p>A USD 71,88, Vista cotiza a unas 10 veces sus ganancias de los últimos doce meses y a alrededor de 3,4 veces el EBITDA que espera para 2027. Son múltiplos bajos para una empresa que crece a más de 30% anual, con márgenes de 68% y un balance que mejora cada trimestre. El descuento refleja dos cosas: el riesgo de un precio del petróleo más bajo y el riesgo de operar en Argentina.</p>
+<div class="scale card"><div class="eyebrow">Escala de valuación</div><div class="scale-bar"><div class="scale-marker" style="left:25%"></div></div>
+<div class="scale-labels"><span>Claramente barata</span><span>Razonable</span><span>Claramente cara</span></div><div class="scale-caption">Con un EV/EBITDA cercano a 3,4x para 2027 y un precio 23% debajo del objetivo promedio de los analistas, la ubico en zona de barata, siempre que el petróleo acompañe.</div></div>
+  </section>
+
+  <section>
+    <h2>¿Cuál es su valor justo?</h2>
+    <p>Como referencia, el precio objetivo promedio de los analistas es de USD 93, con un rango que va de alrededor de USD 72 a más de USD 120. Al precio actual, el potencial de suba hasta el promedio es de 30%. Ese valor supone que el petróleo se mantiene en niveles parecidos a los actuales y que la compañía cumple sus metas de producción.</p>
+  </section>
+
+  <section>
+    <h2>¿Cuáles son los riesgos principales?</h2>
+<ol class="risks"><li>El precio del petróleo. Vista produce casi solo petróleo y lo vende a precio internacional. El Brent bajó de USD 97 a 91 entre el segundo y el tercer trimestre, y cada dólar menos le resta hasta USD 50 millones de EBITDA por año.</li><li>El riesgo argentino. Cambios en regulaciones, impuestos a la exportación o restricciones cambiarias pueden afectar el negocio, aunque hoy el marco es favorable.</li><li>La infraestructura. Si VMOS se demora o la producción crece más rápido que la capacidad de transporte, el crecimiento puede frenarse.</li><li>Los costos en pesos. Con un tipo de cambio quieto e inflación positiva, el costo en dólares sube, como mostró el aumento de 6% en el costo de extracción.</li><li>La concentración. Todos sus activos están en una sola cuenca, así que un problema operativo o ambiental en la zona la afecta de lleno.</li></ol>
+  </section>
+
+  <section>
+    <h2>Conclusión</h2>
+    <p>Vista hizo un trimestre muy bueno en todo lo que depende de ella: producción récord, costos bajos, flujo libre fuerte y una deuda que se achica rápido. La leve decepción en la ganancia por acción se explica por impuestos y depreciación, no por el negocio.</p>
+    <p>Para mí es una de las formas más eficientes de tener exposición a Vaca Muerta. La gestión es de primer nivel, los dueños tienen mucho en juego y la valuación es baja. Pero no deja de ser una apuesta al precio del petróleo y a la Argentina, así que la veo como una posición de crecimiento dentro de la cartera, dimensionada con cuidado, y no como un activo defensivo.</p>
+<div class="formula"><div class="eyebrow">Mi tesis</div><div class="chips"><span class="tag">Producción +33%</span><span class="op">+</span><span class="tag">Costo de extracción de USD 4,7</span><span class="op">+</span><span class="tag">Deuda en baja</span><span class="op">+</span><span class="tag">EV/EBITDA cercano a 3,4x</span><span class="op">+</span><span class="tag neutral">Dependencia del petróleo</span><span class="op">+</span><span class="tag neutral">Riesgo argentino</span></div><div class="result">= Una de las mejores formas de invertir en Vaca Muerta, si se acepta el riesgo del crudo.</div></div>
+    <div class="one-liner"><div class="eyebrow">En una frase</div>Vista saca petróleo más barato que casi cualquiera y crece más rápido que casi todas, pero su precio siempre va a depender de cuánto valga el barril.</div>
+  </section>
+
+<p class="rep-foot">Análisis de fundamentals · Octubre 2026 · Precios al 30 de octubre de 2026. Contenido informativo y educativo; no constituye una recomendación personalizada de inversión.</p>
+</div></main>
+<footer id="ft"></footer>
+<script>document.write('<script src="datos.js?v='+Date.now()+'"><\/script>')</script><script src="app.js"></script>
+</body></html>

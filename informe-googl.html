@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es"><head><title>Informe Alphabet (GOOGL) | Natanael Fernández</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Resultados del tercer trimestre 2026 de Alphabet: nube, flujo libre, dilución, valuación y riesgos."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400&display=swap" rel="stylesheet"><link rel="stylesheet" href="estilos.css">
+<style>
+.rep{max-width:860px}
+.rep .back{display:inline-block;margin-bottom:28px}
+.rep .eyebrow{font-family:Inter,system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--lb);margin-bottom:8px}
+.rep h1{font-size:clamp(30px,5vw,46px);line-height:1.12;margin:0 0 16px;color:#fff}
+.rep .lede{color:#b8c4da;font-size:18px;margin:0 0 30px}
+.rep section{margin-bottom:40px}
+.rep h2{font-size:clamp(22px,3vw,28px);line-height:1.25;margin:0 0 14px;color:#fff}
+.rep p{margin:0 0 14px;color:#e1e8f4;line-height:1.7}
+.rep .up{color:#7fd4a1}.rep .down{color:#f08a8a}
+.rep .card,.rep .kpi,.rep .formula{background:rgba(255,255,255,.04);border:1px solid #2b4468;border-radius:10px}
+.rep .card{padding:22px}
+.rep .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:40px}
+.rep .kpi{padding:16px}
+.rep .kpi .label{font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--mu)}
+.rep .kpi .value{font-family:Newsreader,Georgia,serif;font-size:27px;line-height:1.15;margin:6px 0 4px;color:#fff}
+.rep .kpi .value.up{color:#7fd4a1}.rep .kpi .value.down{color:#f08a8a}
+.rep .kpi .sub{font-size:13px;color:#b8c4da}
+.rep .table-wrap{overflow-x:auto;margin:18px 0;border-radius:10px;border:1px solid #2b4468;background:rgba(255,255,255,.04)}
+.rep table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:500px}
+.rep th,.rep td{padding:11px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08);color:#e1e8f4}
+.rep th{font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--lb)}
+.rep td.num,.rep th.num{text-align:right;font-variant-numeric:tabular-nums}
+.rep tr:last-child td{border-bottom:none}
+.rep .example{background:rgba(255,255,255,.06);border:1px solid #2b4468;border-left:4px solid var(--ac);border-radius:10px;padding:18px 20px;margin:16px 0 18px;color:#e1e8f4;line-height:1.7}
+.rep .example .eyebrow{margin-bottom:6px}
+.rep .note{font-weight:700;color:var(--lb)}
+.rep .scale{margin:20px 0 8px}
+.rep .scale-bar{position:relative;height:12px;border-radius:999px;background:linear-gradient(90deg,#7fd4a1 0%,#5b8fd0 50%,#f08a8a 100%);margin-top:14px}
+.rep .scale-marker{position:absolute;top:-7px;width:4px;height:26px;border-radius:4px;background:#fff;box-shadow:0 0 0 3px rgba(8,26,51,.7);transform:translateX(-50%)}
+.rep .scale-labels{display:flex;justify-content:space-between;gap:8px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--mu);margin-top:12px}
+.rep .scale-caption{font-size:14.5px;color:#b8c4da;margin-top:10px;line-height:1.6}
+.rep ol.risks{counter-reset:r;list-style:none;padding:0;margin:16px 0}
+.rep ol.risks li{counter-increment:r;position:relative;padding:14px 16px 14px 58px;margin-bottom:10px;background:rgba(255,255,255,.04);border:1px solid #2b4468;border-radius:10px;color:#e1e8f4;line-height:1.65}
+.rep ol.risks li::before{content:counter(r);position:absolute;left:16px;top:13px;width:28px;height:28px;border-radius:50%;background:rgba(169,195,232,.16);color:var(--lb);font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.rep ul.news{list-style:none;padding:0;margin:16px 0}
+.rep ul.news li{padding:12px 16px;margin-bottom:8px;background:rgba(255,255,255,.04);border:1px solid #2b4468;border-radius:10px;color:#e1e8f4;line-height:1.65}
+.rep ul.news .date{font-size:11px;font-weight:600;color:var(--lb);letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:2px}
+.rep .tag{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(127,212,161,.14);color:#7fd4a1;border:1px solid rgba(127,212,161,.4);font-size:13.5px;font-weight:500}
+.rep .tag.neutral{background:rgba(240,138,138,.12);color:#f5b3b3;border-color:rgba(240,138,138,.4)}
+.rep .formula{padding:20px;margin:24px 0;background:rgba(255,255,255,.06)}
+.rep .chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.rep .op{color:var(--mu)}
+.rep .result{margin-top:14px;font-family:Newsreader,Georgia,serif;font-size:21px;line-height:1.3;color:#fff}
+.rep .one-liner{margin-top:18px;padding:20px;border-radius:10px;background:rgba(74,127,192,.14);border:1px solid rgba(74,127,192,.45);font-size:17px;color:#fff;line-height:1.6}
+.rep .rep-foot{margin-top:44px;padding-top:20px;border-top:1px solid #2b4468;color:var(--mu);font-size:13px;text-align:center}
+@media(max-width:640px){.rep .kpis{grid-template-columns:repeat(2,1fr)}.rep .kpi .value{font-size:22px}.rep .card,.rep .formula{padding:18px}.rep .scale-labels{font-size:10px}}
+</style></head>
+<body>
+<header id="hd"></header>
+<main class="dk" style="min-height:75vh"><div class="w rep">
+<a class="va back" href="mercados.html">← Volver</a>
+<div class="eyebrow">Resultados del tercer trimestre 2026</div>
+  <h1>GOOGL: Alphabet. ¿Qué oculta un trimestre con la nube creciendo 103%?</h1>
+  <p class="lede">Google Cloud más que duplicó sus ingresos con buena rentabilidad, pero el resultado operativo quedó debajo de lo esperado, la caja libre volvió a ser negativa y la compañía ya se financia con deuda y emisión de acciones.</p>
+
+<div class="kpis">
+<div class="kpi"><div class="label">Precio</div><div class="value down">USD 280,90</div><div class="sub">-13,5% desde el balance</div></div>
+<div class="kpi"><div class="label">Ingresos 3T</div><div class="value ">USD 127.577 M</div><div class="sub">+25% interanual</div></div>
+<div class="kpi"><div class="label">Google Cloud</div><div class="value up">+103%</div><div class="sub">margen operativo de 36,2%</div></div>
+<div class="kpi"><div class="label">Margen operativo</div><div class="value down">31,8%</div><div class="sub">se esperaba 33,7%</div></div>
+<div class="kpi"><div class="label">Flujo libre 3T</div><div class="value down">-USD 9.065 M</div><div class="sub">consenso: -USD 3.700 M</div></div>
+<div class="kpi"><div class="label">P/E forward</div><div class="value ">18,5x</div><div class="sub">con el precio actual</div></div>
+</div>
+
+  <section>
+    <h2>¿Qué hace Alphabet?</h2>
+    <p>Alphabet es la dueña de Google. Su negocio principal es Google Services: el buscador, YouTube, Android, Chrome y las suscripciones como YouTube Premium y Google One. Casi todo eso se monetiza con publicidad. El segundo negocio es Google Cloud, que alquila infraestructura a empresas, vende sus modelos de inteligencia artificial Gemini y, cada vez más, sus propios sistemas de chips, los TPU. El tercero son las "Otras Apuestas", donde la más importante es Waymo, la empresa de autos sin conductor.</p>
+    <p>Hoy factura a un ritmo de medio billón de dólares por año, y la app de Gemini llegó a mil millones de usuarios.</p>
+  </section>
+
+  <section>
+    <h2>¿Cómo le fue en el trimestre?</h2>
+    <p>Los ingresos fueron de USD 127.577 millones, un 25% más que hace un año, apenas por debajo de los USD 127.910 millones que esperaba el consenso. El resultado operativo creció 30% hasta USD 40.576 millones, pero quedó 5,8% debajo de lo estimado, con un margen de 31,8% contra 33,7% esperado.</p>
+    <p>La estrella fue Google Cloud: facturó USD 30.709 millones, un 103% más que hace un año (en el trimestre anterior había crecido 82%), con un aporte relevante de las ventas de sistemas TPU. Su margen operativo subió a 36,2% desde 23,7% un año atrás. Google Services creció 11%, con el buscador en USD 63.350 millones (+12%) y la publicidad de YouTube en USD 11.207 millones (+9%).</p>
+<div class="table-wrap"><table><thead><tr><th class="">Concepto</th><th class="num">3T 2026</th><th class="num">Variación</th><th class="num">Consenso</th></tr></thead><tbody><tr><td class="">Ingresos totales</td><td class="num">USD 127.577 M</td><td class="num">+25%</td><td class="num">USD 127.910 M</td></tr><tr><td class="">Resultado operativo</td><td class="num">USD 40.576 M</td><td class="num">+30%</td><td class="num">USD 43.080 M</td></tr><tr><td class="">Margen operativo</td><td class="num">31,8%</td><td class="num"></td><td class="num">33,7%</td></tr><tr><td class="">Google Cloud</td><td class="num">USD 30.709 M</td><td class="num">+103%</td><td class="num"></td></tr><tr><td class="">Cloud: margen operativo</td><td class="num">36,2%</td><td class="num">23,7% hace un año</td><td class="num"></td></tr><tr><td class="">Buscador</td><td class="num">USD 63.350 M</td><td class="num">+12%</td><td class="num"></td></tr><tr><td class="">YouTube publicidad</td><td class="num">USD 11.207 M</td><td class="num">+9%</td><td class="num"></td></tr><tr><td class="">EPS contable</td><td class="num">USD 2,12</td><td class="num"></td><td class="num">USD 3,01</td></tr><tr><td class="">Flujo libre</td><td class="num">-USD 9.065 M</td><td class="num">-USD 5.855 M en el 2T</td><td class="num">-USD 3.700 M</td></tr></tbody></table></div>
+    <p>El buscador desaceleró respecto del trimestre anterior. La compañía lo explica por el tipo de cambio, por anunciantes de Asia afectados por cambios aduaneros en Europa y por la base de comparación del Mundial, y reconoce otro factor: las búsquedas con inteligencia artificial (AI Mode) crecen muy rápido pero todavía se monetizan menos que las tradicionales. Ahora empieza a mostrar más publicidad en esas respuestas y a llevarla a otros países.</p>
+  </section>
+
+  <section>
+    <h2>¿Por qué la ganancia contable fue mucho menor que la del negocio?</h2>
+    <p>La ganancia por acción contable fue de USD 2,12, muy por debajo de los USD 3,01 esperados. Pero buena parte de esa diferencia no viene del negocio, sino de una pérdida de USD 8.664 millones en la valuación de sus participaciones en otras empresas, principalmente SpaceX, cuya cotización cayó en el trimestre. Un año atrás, el mismo rubro le había dado una ganancia de USD 12.759 millones.</p>
+<div class="example"><div class="eyebrow">Ejemplo</div>Supongamos que tenés un kiosco que gana 100 por mes y, además, guardás acciones de otra empresa. Si ese mes las acciones caen 30, tu resultado contable es 70, aunque el kiosco vendió igual que siempre. Si el mes siguiente suben 30, tu resultado es 130. Para saber cómo anda el kiosco, conviene mirar la ganancia del negocio y separar lo que se mueve por las inversiones.</div>
+    <p>Sin ese efecto, la ganancia por acción habría sido de unos USD 2,67. Igual queda debajo de los USD 3,01 esperados, así que el trimestre fue algo flojo incluso descontando las inversiones. <span class="note">Ojo con esto.</span> Esa volatilidad también explica por qué el P/E de los últimos doce meses que muestran algunas plataformas parece muy bajo: la ganancia incluye años de revalorizaciones de inversiones que no se repiten.</p>
+  </section>
+
+  <section>
+    <h2>¿Qué es el flujo de caja libre y por qué volvió a ser negativo?</h2>
+    <p>El flujo de caja libre es la plata que queda después de operar e invertir en infraestructura. Alphabet generó USD 42.290 millones de flujo operativo, pero invirtió USD 51.355 millones en capex, sobre todo en servidores y centros de datos. El resultado fue un flujo libre de menos USD 9.065 millones, el segundo trimestre seguido en negativo y bastante peor que lo esperado.</p>
+<div class="example"><div class="eyebrow">Ejemplo</div>Supongamos que una fábrica de muebles cobra 42 en el mes, pero ese mes compra máquinas por 51 y además acumula madera para pedidos que va a entregar el año que viene. Ese mes la caja da negativo, aunque la fábrica tiene clientes y contratos firmados. Alphabet está en esa situación: además del capex, acumula inventario de sistemas TPU que va a cobrar recién cuando los entregue, y este trimestre pagó una multa europea de USD 5.200 millones.</div>
+    <p>En los últimos doce meses, el flujo libre fue positivo por USD 19.700 millones, pero es una fracción de lo que solía generar. Y la compañía ya avisó que el capex de 2027, que hoy ronda los USD 195.000 a 205.000 millones anuales, va a subir de forma significativa.</p>
+  </section>
+
+  <section>
+    <h2>¿Qué es la dilución y por qué importa ahora?</h2>
+    <p>La dilución ocurre cuando una empresa emite acciones nuevas. La torta es la misma, pero se reparte entre más porciones, así que cada accionista pasa a tener una parte un poco más chica de la compañía y de sus ganancias.</p>
+<div class="example"><div class="eyebrow">Ejemplo</div>Supongamos que una empresa tiene 100 acciones y gana 1.000 por año: cada acción gana 10. Si emite 5 acciones nuevas para financiar una obra, ahora son 105 acciones. Si la ganancia sigue en 1.000, cada acción gana 9,52. La emisión solo tiene sentido si la obra termina generando más de lo que se diluyó.</div>
+    <p>Durante años Alphabet hizo lo contrario: recompraba acciones y achicaba la cantidad en circulación. <span class="note">Esto es importante.</span> A fines de agosto anunció un plan de financiamiento de hasta USD 84.750 millones que incluye USD 18.000 millones en acciones comunes, USD 16.750 millones en convertibles obligatorios, una colocación de USD 10.000 millones con Berkshire Hathaway y un programa de venta de acciones de hasta USD 40.000 millones. En el tercer trimestre ya emitió USD 12.400 millones en acciones y USD 28.700 millones netos en deuda, y la deuda de largo plazo pasó de USD 46.547 millones en diciembre a USD 125.102 millones.</p>
+  </section>
+
+  <section>
+    <h2>¿Qué es el backlog y por qué sostiene la tesis?</h2>
+    <p>El backlog es la cartera de contratos firmados que todavía no se convirtieron en ingresos. Funciona como una agenda de ventas futuras ya comprometidas.</p>
+<div class="example"><div class="eyebrow">Ejemplo</div>Supongamos que un constructor tiene 10 obras firmadas por 500 en total y va a cobrarlas a lo largo de dos años. Aunque este mes facture 30, sabe que tiene 500 por delante. Ese número le da visibilidad para contratar gente y comprar materiales.</div>
+    <p>El backlog de Google Cloud llegó a USD 561.000 millones, y la compañía espera reconocer algo más de 55% como ingresos en los próximos 24 meses. Es una de las razones por las que la gerencia se anima a invertir tanto: la demanda ya está firmada. Más de 100 clientes usan sus TPU, entre ellos Anthropic y Apple, y la compañía firmó acuerdos para vender esos sistemas a través de Oracle y de Crux AI, una sociedad con Blackstone.</p>
+  </section>
+
+  <section>
+    <h2>¿Qué pasó desde el balance?</h2>
+    <p>La acción cerró en USD 324,89 el día del balance. Al día siguiente cayó 12,6% hasta USD 283,82 y hoy cotiza en USD 280,90, una baja acumulada de 13,5%. Queda 31% debajo de su máximo de 52 semanas (USD 408,61) y cerca de 12% arriba de su mínimo. En los últimos cinco años acumula una suba de 96%.</p>
+    <p>De los 60 analistas que la cubren, 42 recomiendan comprar, 11 sobreponderar, 5 mantener y ninguno vender. El precio objetivo promedio es de USD 409, un 45% arriba del precio actual. Después del balance hubo recortes: Rothschild &amp; Co Redburn bajó su objetivo de USD 430 a 365, y en las semanas previas KeyBanc lo había bajado de 435 a 410.</p>
+    <p>Terminó el trimestre con USD 265.100 millones en caja e inversiones (incluidos USD 90.400 millones en acciones de otras empresas) y mantiene un dividendo trimestral de USD 0,22 por acción. Este trimestre no hubo recompras relevantes: la compañía está del lado de emitir.</p>
+  </section>
+
+  <section>
+    <h2>¿Qué movimientos hizo la empresa en las últimas semanas?</h2>
+<ul class="news"><li><span class="date">Octubre</span>Lanzó Gemini 4 Argon y, el día del balance, presentó Carbon, su modelo más potente, que primero se habilita a especialistas en ciberseguridad. Sumó los modelos de OpenAI y una opción de Claude administrada por Anthropic a su nube.</li><li><span class="date">21 oct</span>Una caída de Google Cloud en Londres afectó a bancos e instituciones públicas del Reino Unido, y los reguladores europeos piden explicaciones.</li><li><span class="date">20 oct</span>Waymo anunció que llegará a Madrid y Toronto y que apunta a una flota de 20.000 vehículos para fines de 2027. Ya opera en 15 ciudades de Estados Unidos.</li><li><span class="date">12 oct</span>El comparador de precios sueco Prisjakt la demandó por unos USD 2.100 millones por sus prácticas en las búsquedas de compras.</li><li><span class="date">7 oct</span>Firmó con Constellation Energy un contrato de 20 años por energía nuclear adicional para sus centros de datos.</li><li><span class="date">21 sep</span>El regulador de datos de Irlanda la multó con 403 millones de euros por el manejo de datos de ubicación.</li><li><span class="date">17 sep</span>Junto con Blackstone consiguió USD 22.000 millones de financiamiento para Crux AI, que va a ofrecer sistemas TPU a terceros.</li><li><span class="date">9 sep</span>Anunció inversiones por al menos 13.000 millones de euros en infraestructura de inteligencia artificial en Finlandia para 2027 y 2028.</li><li><span class="date">2 sep</span>Un juez rechazó el pedido del gobierno de Estados Unidos de obligarla a vender su negocio de intercambio de publicidad. Fue una buena noticia en el frente judicial.</li><li><span class="date">31 ago</span>Anunció el plan de financiamiento de USD 84.750 millones con Berkshire Hathaway como inversor y una alianza con Marvell para desarrollar chips, que incluye opciones para comprar acciones de Marvell.</li></ul>
+  </section>
+
+  <section>
+    <h2>¿Quiénes son los dueños y qué hacen los de adentro?</h2>
+    <p>Los fundadores siguen siendo decisivos. Sergey Brin tiene 5,8% de las acciones y Larry Page 3,2%, pero gracias a las acciones clase B, que tienen diez votos cada una, controlan la mayoría de los votos. En la práctica, las grandes decisiones dependen de ellos. Eric Schmidt, ex CEO, conserva 0,4% y Sundar Pichai, el CEO actual, unas 3 millones de acciones.</p>
+    <p>Los movimientos recientes de los directivos son casi todos de rutina: acciones que reciben como compensación y una parte que se retiene para pagar impuestos. No hubo compras en el mercado. Tampoco hubo ventas significativas que llamen la atención. La novedad relevante del lado de los dueños es la entrada de Berkshire Hathaway con USD 10.000 millones, que muestra el respaldo de un inversor de largo plazo.</p>
+  </section>
+
+  <section>
+    <h2>¿Qué es el P/E forward y cuánto vale Alphabet?</h2>
+    <p>El P/E forward compara el precio de la acción con la ganancia por acción esperada para los próximos doce meses. Muestra cuántos años de ganancias futuras paga el inversor.</p>
+<div class="example"><div class="eyebrow">Ejemplo</div>Supongamos que una acción vale 100 y se espera que gane 5,40 por acción el año que viene. El P/E forward es 18,5: pagás 18,5 veces esa ganancia.</div>
+    <p>A USD 280,90, Alphabet cotiza a 25,3 veces las ganancias de los últimos doce meses y a 18,5 veces las esperadas. Es un múltiplo bajo para una empresa que crece 25% en ingresos y cuya nube duplica su tamaño. El descuento refleja la preocupación del mercado por cuánto va a gastar en 2027 y cómo lo va a financiar.</p>
+<div class="scale card"><div class="eyebrow">Escala de valuación</div><div class="scale-bar"><div class="scale-marker" style="left:14%"></div></div>
+<div class="scale-labels"><span>Claramente barata</span><span>Razonable</span><span>Claramente cara</span></div><div class="scale-caption">Con un P/E forward de 18,5x y un precio 38% debajo de su valor justo estimado, la ubico en zona de barata.</div></div>
+  </section>
+
+  <section>
+    <h2>¿Cuál es su valor justo?</h2>
+    <p>Morningstar actualizó su análisis después del balance y mantiene un valor justo de USD 450 por acción, con ventaja competitiva amplia, incertidumbre media y una asignación de capital que califica como ejemplar. A USD 280,90, la acción cotiza 38% por debajo de esa estimación, lo que implica un potencial de suba de 60%. Es la calificación más alta que suele dar, cinco estrellas.</p>
+  </section>
+
+  <section>
+    <h2>¿Cuáles son los riesgos principales?</h2>
+<ol class="risks"><li>El capex de 2027. La compañía adelantó que va a subir de forma significativa sobre los USD 195.000 a 205.000 millones de este año. Si la inversión crece más rápido que los ingresos, la caja libre puede seguir en negativo varios trimestres.</li><li>La dilución. Por primera vez en muchos años, Alphabet financia su crecimiento emitiendo acciones. Si los retornos de la inversión tardan, el accionista paga la diferencia.</li><li>La transición del buscador. Las búsquedas con inteligencia artificial crecen, pero hoy se monetizan menos. Si los anuncios en esas respuestas no rinden lo mismo, el negocio más rentable del grupo puede perder impulso.</li><li>Los márgenes de la nube. Para cubrir la demanda empezó a alquilar capacidad de terceros, y la compañía avisó que eso va a presionar el margen de Cloud en el corto plazo.</li><li>Los frentes judiciales y regulatorios. Multas en Europa, la demanda de Prisjakt y el escrutinio sobre su manejo de datos siguen abiertos, y además sus resultados contables quedan expuestos a las oscilaciones del valor de SpaceX.</li></ol>
+  </section>
+
+  <section>
+    <h2>Conclusión</h2>
+    <p>Alphabet tiene hoy uno de los mejores momentos operativos de su historia. La nube duplica sus ingresos con márgenes cada vez mejores, Gemini ya está entre los modelos líderes y el buscador sigue creciendo pese a la competencia de la inteligencia artificial. El problema es el costo de sostener ese crecimiento: dos trimestres seguidos de flujo libre negativo, deuda que casi se triplicó en nueve meses y emisión de acciones.</p>
+    <p>La caída posterior al balance dejó a la acción a 18,5 veces sus ganancias esperadas y muy por debajo de su valor justo. Para mí es una de las situaciones más interesantes del sector por relación entre calidad y precio, pero no la compraría pensando que el ruido se termina rápido. Lo que más voy a mirar es el número de capex para 2027 que la compañía va a dar en febrero y cómo piensa financiarlo.</p>
+<div class="formula"><div class="eyebrow">Mi tesis</div><div class="chips"><span class="tag">Cloud creciendo 103%</span><span class="op">+</span><span class="tag">Backlog de USD 561.000 M</span><span class="op">+</span><span class="tag">P/E forward de 18,5x</span><span class="op">+</span><span class="tag neutral">Flujo libre negativo</span><span class="op">+</span><span class="tag neutral">Más deuda y más acciones</span></div><div class="result">= Calidad a un precio atractivo, con la caja como gran interrogante.</div></div>
+    <div class="one-liner"><div class="eyebrow">En una frase</div>Alphabet nunca creció tan rápido en la nube, pero por primera vez en años le está pidiendo plata al mercado para pagar ese crecimiento.</div>
+  </section>
+
+<p class="rep-foot">Análisis de fundamentals · Octubre 2026 · Precios al 30 de octubre de 2026. Contenido informativo y educativo; no constituye una recomendación personalizada de inversión.</p>
+</div></main>
+<footer id="ft"></footer>
+<script>document.write('<script src="datos.js?v='+Date.now()+'"><\/script>')</script><script src="app.js"></script>
+</body></html>
