@@ -12,7 +12,8 @@ var INFORME_PRINCIPAL={titulo:"Weekly - Informe de mercado",fecha:"2026-11-06",r
 
 // INFORMES: el primero de la lista es el más nuevo. Para agregar uno, copiá la línea de ejemplo, sacale las // y pegala ARRIBA de las demás.
 var INFORMES=[
- // {etiqueta:"Informe NVDA",titulo:"NVDA",resumen:"Descripción corta del informe.",fecha:"2026-11-09",enlace:"informes/nvda.html"},
+ {etiqueta:"Informe GOOGL",titulo:"Alphabet (GOOGL)",resumen:"Google Cloud más que duplicó sus ingresos, pero el margen operativo quedó debajo de lo esperado y el flujo libre volvió a ser negativo.",fecha:"2026-10-30",enlace:"informe-googl.html"},
+ {etiqueta:"Informe VIST",titulo:"Vista Energy (VIST)",resumen:"Producción récord, EBITDA +78% y flujo libre fuerte en el tercer trimestre. Valuación, riesgos y tesis de inversión.",fecha:"2026-10-30",enlace:"informe-vist.html"},
 ];
 
 // VIDEOS (Información y Análisis): el primero es el más nuevo. imagen es opcional (ej: "img/video1.jpg"); sin imagen se muestra el título.
