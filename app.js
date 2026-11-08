@@ -23,3 +23,8 @@ if(cf)cf.onsubmit=function(e){e.preventDefault();var f=this,b=f.querySelector("b
 if(!FORMULARIO){window.open(wa+"?text="+encodeURIComponent("Hola, soy "+f.nom.value+" ("+f.email.value+"). "+f.msg.value),"_blank","noopener");return}
 b.disabled=true;b.textContent="Enviando…";m.textContent="";
 fetch(FORMULARIO,{method:"POST",body:new FormData(f),headers:{Accept:"application/json"}}).then(function(r){if(!r.ok)throw 0;f.reset();m.textContent="¡Gracias! Recibí tu consulta y te voy a responder por correo."}).catch(function(){m.textContent="No se pudo enviar tu consulta. Probá de nuevo o escribime por WhatsApp."}).then(function(){b.disabled=false;b.textContent="Enviar consulta →"})};
+var PR=typeof PRECIOS!=="undefined"?PRECIOS:{};
+Array.prototype.forEach.call(document.querySelectorAll("[data-p]"),function(x){var v=PR[x.getAttribute("data-p")];x.textContent=v||"";if(!v)x.style.display="none"});
+var LS=typeof LINK_SUSCRIPCION!=="undefined"?LINK_SUSCRIPCION:"";
+put("pay",LS?'<a class="pl" href="'+LS+'" target="_blank" rel="noopener">Suscribirme →</a>':"");
+if(PR.clasica&&PR.personalizada&&PR.integral)put("fqp","Asesoría Clásica: "+PR.clasica.toLowerCase()+". Asesoría Personalizada: "+PR.personalizada+". Asesoría Integral: "+PR.integral.charAt(0).toLowerCase()+PR.integral.slice(1)+". Para consultar o contratar, escribime por WhatsApp.");

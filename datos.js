@@ -6,6 +6,12 @@ var LINKEDIN="https://www.linkedin.com/in/natanael-fern%C3%A1ndez-7324013b5";
 // FORMULARIO: pegá entre las comillas el link que te da Formspree (ej: "https://formspree.io/f/xxxxxxxx"). Vacío = el formulario abre WhatsApp con los datos.
 var FORMULARIO="https://formspree.io/f/xkjjazod";
 
+// PRECIOS DE LAS ASESORÍAS: cambiá solo el texto entre comillas. Se actualizan solos en la sección de servicios y en las preguntas frecuentes.
+// Si dejás uno vacío "" (por ejemplo integral:""), ese precio no se muestra.
+var PRECIOS={clasica:"Sin costo",personalizada:"$19.999 por mes",integral:"Se cotiza según tu situación"};
+// LINK_SUSCRIPCION (opcional): link del plan de suscripción de Mercado Pago para la Asesoría Personalizada. Vacío "" = no aparece el botón "Suscribirme".
+var LINK_SUSCRIPCION="";
+
 // INFORME PRINCIPAL: siempre aparece primero en "Información de mercado". Cuando quieras destacar uno nuevo, cambiá título, fecha ("AAAA-MM-DD"), resumen y enlace.
 // enlace: archivo o link del informe, por ejemplo "informes/mercado-2026-11-09.html". Vacío "" = sin link todavía.
 var INFORME_PRINCIPAL={titulo:"Weekly - Informe de mercado",fecha:"2026-11-06",resumen:"Fuerte corrección en Wall Street y en los activos argentinos: renta variable, bonos, tipo de cambio, macro local y novedades de la región.",enlace:"informe-2026-11-06.html"};
