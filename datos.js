@@ -14,7 +14,7 @@ var LINK_SUSCRIPCION="";
 
 // INFORME PRINCIPAL: siempre aparece primero en "Información de mercado". Cuando quieras destacar uno nuevo, cambiá título, fecha ("AAAA-MM-DD"), resumen y enlace.
 // enlace: archivo o link del informe, por ejemplo "informes/mercado-2026-11-09.html". Vacío "" = sin link todavía.
-var INFORME_PRINCIPAL={titulo:"Informe de mercado",fecha:"",resumen:"Dilema con NVIDIA ¿catastrofe u oportunidad?. Luego de informes recientes sobre un relación extramatrimonial de Jensen Huang, CEO de NVIDIA, con una posible espía china segun identifican los miembros, la acción de desploma en la bolsa.",enlace:"informe.html"};
+var INFORME_PRINCIPAL={titulo:"Informe de mercado",fecha:"2026-11-12",resumen:"Dilema con NVIDIA ¿catastrofe u oportunidad?. Luego de informes recientes sobre un relación extramatrimonial de Jensen Huang, CEO de NVIDIA, con una posible espía china segun identifican los miembros, la acción de desploma en la bolsa.",enlace:"informe.html"};
 
 // INFORMES: el primero de la lista es el más nuevo. Para agregar uno, copiá la línea de ejemplo, sacale las // y pegala ARRIBA de las demás.
 var INFORMES=[
