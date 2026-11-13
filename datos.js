@@ -18,7 +18,7 @@ var INFORME_PRINCIPAL={titulo:"Informe de mercado",fecha:"2026-11-12",resumen:"D
 
 // INFORMES: el primero de la lista es el más nuevo. Para agregar uno, copiá la línea de ejemplo, sacale las // y pegala ARRIBA de las demás.
 var INFORMES=[
- {etiqueta:"Weekly 9-11-2026",titulo:"Informe semanal",resumen:"Un panorama general del mercado en Argentina y EEUU para entender las principales reacciones..",fecha:"2026-11-09",enlace:"informe-2026-11-09.html"},
+ {etiqueta:"Weekly 6-11-2026",titulo:"Informe semanal",resumen:"Un panorama general del mercado en Argentina y EEUU para entender las principales reacciones..",fecha:"2026-11-06",enlace:"informe-2026-11-06.html"},
  {etiqueta:"Informe GOOGL",titulo:"Alphabet (GOOGL)",resumen:"Google Cloud más que duplicó sus ingresos, pero el margen operativo quedó debajo de lo esperado y el flujo libre volvió a ser negativo.",fecha:"2026-10-30",enlace:"informe-googl.html"},
  {etiqueta:"Informe VIST",titulo:"Vista Energy (VIST)",resumen:"Producción récord, EBITDA +78% y flujo libre fuerte en el tercer trimestre. Valuación, riesgos y tesis de inversión.",fecha:"2026-10-30",enlace:"informe-vist.html"},
 ];
